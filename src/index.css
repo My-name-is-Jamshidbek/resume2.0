@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+  @apply font-sans antialiased;
+  overflow: hidden; /* presentation mode */
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* Persistent background layered on the body (replaces .global-bg div) */
+/* CSS variables for quick theme adjustments */
+:root {
+  --bg-base: #0b1220;
+  --bg-grad-1: #0f1b2e;
+  --bg-grad-2: #132236;
+  --bg-grad-3: #1b314a;
+  --glow-emerald: rgba(16,185,129,0.18);
+  --glow-cyan: rgba(6,182,212,0.16);
+  --glow-indigo: rgba(99,102,241,0.14);
+  --accent-shift-a: #0ea5e9;
+  --accent-shift-b: #6366f1;
+  --accent-shift-c: #10b981;
+}
+
+/* Main structural background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    /* soft radial glows */
+    radial-gradient(circle at 18% 25%, var(--glow-emerald), transparent 60%),
+    radial-gradient(circle at 82% 72%, var(--glow-cyan), transparent 62%),
+    radial-gradient(circle at 50% 110%, var(--glow-indigo), transparent 70%),
+    /* animated angle gradient layer (separate, animated via ::after) */
+    linear-gradient(145deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 55%, var(--bg-grad-3) 100%),
+    /* pattern */
+    url('/assets/grid-pattern.svg');
+  background-size: 100% 100%, 100% 100%, 100% 100%, cover, 600px 600px;
+  background-blend-mode: normal, normal, normal, overlay, overlay;
+  pointer-events: none;
+  filter: saturate(1.05);
+}
+
+/* Animated gradient & subtle noise overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: 
+    linear-gradient(120deg, var(--accent-shift-a), var(--accent-shift-b), var(--accent-shift-c));
+  background-size: 180% 180%;
+  mix-blend-mode: overlay;
+  opacity: 0.18;
+  animation: bgShift 18s ease-in-out infinite alternate;
+  pointer-events: none;
+  mask-image: radial-gradient(circle at 40% 40%, rgba(255,255,255,0.9), transparent 70%);
+}
+
+/* Optional noise layer (light weight data URI) */
+@media (min-width: 640px) {
+  body::after {
+    background-image:
+      linear-gradient(120deg, var(--accent-shift-a), var(--accent-shift-b), var(--accent-shift-c)),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Crect width='140' height='140' fill='rgba(0,0,0,0)'/%3E%3Ccircle cx='10' cy='12' r='1' fill='rgba(255,255,255,0.06)'/%3E%3Ccircle cx='90' cy='64' r='1' fill='rgba(255,255,255,0.05)'/%3E%3Ccircle cx='120' cy='24' r='1' fill='rgba(255,255,255,0.04)'/%3E%3Ccircle cx='50' cy='100' r='1' fill='rgba(255,255,255,0.05)'/%3E%3Ccircle cx='32' cy='40' r='1' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E");
+    background-size: 180% 180%, 140px 140px;
+    background-blend-mode: overlay, normal;
+  }
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; filter: hue-rotate(0deg); }
+  50% { background-position: 100% 50%; filter: hue-rotate(20deg); }
+  100% { background-position: 0% 50%; filter: hue-rotate(-15deg); }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:py-32;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-slate-800/20 backdrop-blur-md border border-slate-700/30 shadow-xl;
+  }
+  
+  .glass-card {
+    @apply bg-slate-800/30 backdrop-blur-lg border border-slate-700/40 rounded-xl shadow-2xl;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  }
+  
+  .accent-gradient {
+    @apply bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-600;
+  }
+  
+  .presentation-slide {
+    @apply w-full h-screen;
+  }
+  
+  /* Removed old .global-bg (now handled via body::before) */
+  
+  .app-section::after { /* subtle top separator gradient */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(15,23,42,0.9), rgba(15,23,42,0) 35%);
+    mix-blend-mode: normal;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  
+  .app-section { /* stacking context for overlay removal if needed */
+    isolation: isolate;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #10b981, #06b6d4, #3b82f6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #059669, #0891b2, #2563eb);
+}
+
+/* Hide scrollbar for certain elements */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
