@@ -202,12 +202,12 @@ export default function Contact({ slideIndex }) {
       id="contact"
     >
       <div className="h-full flex items-center justify-center">
-        <div className="container-custom px-6 py-4 max-w-7xl mx-auto w-full">
+  <div className="container-custom px-4 sm:px-6 py-4 max-w-7xl mx-auto w-full">
           {/* Top padding for pinned header */}
           <div className="pt-20 mb-6"></div>
 
           {/* Contact Methods Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-8">
             {contactMethods.map((method, index) => (
               <a
                 key={index}
@@ -233,10 +233,10 @@ export default function Contact({ slideIndex }) {
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="glass-effect bg-gray-800/30 rounded-xl p-6 border border-gray-700/50">
+              <div className="glass-effect bg-gray-800/30 rounded-xl p-5 md:p-6 border border-gray-700/50">
                 <div className="contact-animate mb-6">
                   <h3 className="text-2xl font-bold mb-2">Send Me a Message</h3>
                   <p className="text-gray-400 text-sm">
@@ -245,7 +245,7 @@ export default function Contact({ slideIndex }) {
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid md:grid-cols-2 gap-4">
+                  <div className="grid md:grid-cols-2 gap-3 md:gap-4">
                     <div className="form-field">
                       <label htmlFor="name" className="block text-xs font-medium text-gray-300 mb-1">
                         Full Name *

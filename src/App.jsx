@@ -8,6 +8,8 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import HelpOverlay from './components/HelpOverlay'
+import MobileNav from './components/MobileNav'
+import SwipeHint from './components/SwipeHint'
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger)
@@ -284,16 +286,18 @@ function App() {
     <div ref={containerRef} className="relative h-screen overflow-hidden">
       {/* Global Pinned Header - stays stationary, only text changes - Hidden on Hero page */}
       {currentSlide !== 0 && (
-        <div ref={headerRef} className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
-          <div className="glass-effect bg-gray-900/80 backdrop-blur-lg rounded-2xl px-8 py-4 border border-gray-700/50 shadow-2xl">
-            <div className="text-center">
-              <h2 ref={titleRef} className="text-4xl md:text-5xl font-bold mb-2">
-                <span className="gradient-text">{sections[currentSlide]?.title}</span>
-              </h2>
-              <div ref={underlineRef} className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-2 scale-x-100"></div>
-              <p ref={subtitleRef} className="text-lg text-gray-300 max-w-xl mx-auto">
-                {sections[currentSlide]?.subtitle}
-              </p>
+        <div ref={headerRef} className="fixed top-3 md:top-6 left-1/2 transform -translate-x-1/2 z-50 px-2 w-full pointer-events-none">
+          <div className="mx-auto max-w-4xl pointer-events-auto">
+            <div className="glass-effect bg-gray-900/80 backdrop-blur-lg rounded-xl md:rounded-2xl px-4 md:px-8 py-3 md:py-4 border border-gray-700/50 shadow-2xl">
+              <div className="text-center">
+                <h2 ref={titleRef} className="text-2xl sm:text-3xl md:text-5xl font-bold mb-1 md:mb-2 leading-snug">
+                  <span className="gradient-text">{sections[currentSlide]?.title}</span>
+                </h2>
+                <div ref={underlineRef} className="w-12 md:w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-1 md:mb-2 scale-x-100"></div>
+                <p ref={subtitleRef} className="text-xs sm:text-sm md:text-lg text-gray-300 mx-auto max-w-md md:max-w-xl px-2 md:px-0 leading-relaxed">
+                  {sections[currentSlide]?.subtitle}
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -315,9 +319,20 @@ function App() {
       })}
 
       {/* Simple slide indicator (optional) */}
-      <div className="fixed bottom-6 right-6 z-50 px-4 py-2 rounded-full glass-effect text-xs tracking-wide">
+      <div className="hidden md:block fixed bottom-6 right-6 z-50 px-4 py-2 rounded-full glass-effect text-xs tracking-wide">
         {currentSlide + 1} / {sections.length}
       </div>
+
+      {/* Mobile Bottom Navigation */}
+      <MobileNav
+        current={currentSlide}
+        total={sections.length}
+        sections={sections}
+        onPrev={() => goToSlide(currentSlide - 1)}
+        onNext={() => goToSlide(currentSlide + 1)}
+        onJump={(i) => goToSlide(i)}
+      />
+      <SwipeHint />
 
       <HelpOverlay />
     </div>

@@ -103,7 +103,7 @@ export default function Hero() {
   return (
     <section 
       ref={heroRef}
-      className="relative w-full h-screen overflow-hidden text-white flex items-center justify-center"
+  className="relative w-full h-screen overflow-hidden text-white flex items-center justify-center"
       aria-label="Introduction"
     >
       {/* Loading overlay */}
@@ -125,37 +125,37 @@ export default function Hero() {
       </div>
 
       {/* Main content container */}
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10 w-full">
+  <div className="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center relative z-10 w-full">
         {/* Left column: Text content */}
         <div className="w-full md:w-1/2 pt-24 md:pt-0 order-2 md:order-1">
           <div className="max-w-xl">
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+            <h1 className="text-4xl xs:text-[2.75rem] md:text-7xl font-extrabold mb-6 tracking-tight leading-[1.05]">
               {renderSplitText('Jamshidbek', 'hero-name')}
             </h1>
             
-            <h2 className="hero-title text-xl md:text-2xl text-blue-400 font-medium mb-4 flex items-center">
-              <span className="inline-block w-8 h-0.5 bg-blue-400 mr-3"></span>
+            <h2 className="hero-title text-base xs:text-lg md:text-2xl text-blue-400 font-medium mb-4 flex items-center">
+              <span className="inline-block w-6 md:w-8 h-0.5 bg-blue-400 mr-3"></span>
               Full-Stack Developer
             </h2>
             
-            <p className="hero-tagline text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="hero-tagline text-sm xs:text-base md:text-xl text-gray-300 mb-8 leading-relaxed">
               Crafting innovative digital experiences with modern technologies and 
               <span className="block font-semibold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 stunning animations that captivate users
               </span>
             </p>
             
-            <div className="flex flex-wrap gap-5 mb-10">
+            <div className="flex flex-wrap gap-4 md:gap-5 mb-8 md:mb-10">
               <a 
                 href="#projects" 
-                className="hero-cta relative group bg-blue-500 hover:bg-blue-600 px-8 py-4 rounded-full font-medium text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+                className="hero-cta relative group bg-blue-500 hover:bg-blue-600 px-6 md:px-8 py-3 md:py-4 rounded-full font-medium text-white text-sm md:text-base transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <span className="relative z-10">Explore My Work</span>
                 <span className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </a>
               <a 
                 href="#contact" 
-                className="hero-cta relative overflow-hidden px-8 py-4 rounded-full font-medium text-white border border-white/30 hover:border-white/50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="hero-cta relative overflow-hidden px-6 md:px-8 py-3 md:py-4 rounded-full font-medium text-white text-sm md:text-base border border-white/30 hover:border-white/50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 <span className="relative z-10">Get In Touch</span>
                 <span className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -163,14 +163,14 @@ export default function Hero() {
             </div>
             
             {/* Social icons */}
-            <div className="flex gap-5 mb-12 md:mb-0">
+            <div className="flex gap-4 md:gap-5 mb-10 md:mb-0">
               {['github', 'linkedin', 'twitter', 'instagram'].map((platform, index) => (
                 <a 
                   key={platform} 
                   href={`https://${platform}.com/jamshidbek`} 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  className="social-icon w-9 h-9 md:w-10 md:h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label={`Follow on ${platform}`}
                 >
                   <span className="sr-only">{platform}</span>
@@ -182,11 +182,11 @@ export default function Hero() {
         </div>
         
         {/* Right column: Profile image */}
-        <div className="w-full md:w-1/2 md:h-full flex items-center justify-center order-1 md:order-2 mb-8 md:mb-0">
+        <div className="w-full md:w-1/2 md:h-full flex items-center justify-center order-1 md:order-2 mb-6 md:mb-0">
           <div className="relative">
             {/* Main profile image */}
             <div className="profile-float relative z-10">
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
+              <div className="relative w-52 h-52 xs:w-60 xs:h-60 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
                 <img 
                   src={profileImage}
                   alt="Jamshidbek"
@@ -200,13 +200,13 @@ export default function Hero() {
             </div>
             
             {/* Experience badge */}
-            <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-2 rounded-full shadow-lg z-20">
-              <p className="text-sm font-medium">5+ Years Experience</p>
+            <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1.5 rounded-full shadow-lg z-20">
+              <p className="text-xs xs:text-sm font-medium">5+ Years Experience</p>
             </div>
             
             {/* Tech stack badge */}
-            <div className="absolute -top-4 -right-4 bg-gray-800/80 backdrop-blur-sm text-white px-5 py-2 rounded-full shadow-lg z-20">
-              <p className="text-sm font-medium">React • Node • GSAP</p>
+            <div className="absolute -top-4 -right-4 bg-gray-800/80 backdrop-blur-sm text-white px-4 py-1.5 rounded-full shadow-lg z-20">
+              <p className="text-xs xs:text-sm font-medium">React • Node • GSAP</p>
             </div>
             
             {/* Background glow */}
@@ -216,9 +216,9 @@ export default function Hero() {
       </div>
       
       {/* Scroll indicator */}
-      <div className="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-80 hover:opacity-100 transition-opacity duration-300">
-        <span className="text-sm text-gray-400 mb-2">Scroll Down</span>
-        <div className="w-6 h-10 rounded-full border-2 border-gray-400 flex items-start justify-center p-1">
+      <div className="scroll-indicator absolute bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-80 hover:opacity-100 transition-opacity duration-300">
+        <span className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">Scroll Down</span>
+        <div className="w-5 h-9 md:w-6 md:h-10 rounded-full border-2 border-gray-400 flex items-start justify-center p-1">
           <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></div>
         </div>
       </div>

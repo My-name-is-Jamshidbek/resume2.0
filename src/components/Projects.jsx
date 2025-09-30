@@ -126,54 +126,47 @@ export default function Projects({ slideIndex }) {
     ScrollTrigger.getAll().forEach(st => st.kill());
     
     const run = () => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
       let ctx = gsap.context(() => {
-        // Initial setup
-        gsap.set('.project-slide', { opacity: 0, y: 100 });
-        gsap.set('.project-nav-item', { opacity: 0, scale: 0.8 });
-        gsap.set('.project-meta', { opacity: 0, x: -50 });
-        gsap.set('.project-feature', { opacity: 0, y: 20 });
-
-        // Main animation timeline
-        const tl = gsap.timeline();
-
-        // Animate navigation items
-        tl.to('.project-nav-item', {
-          opacity: 1,
-          scale: 1,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: 'back.out(1.7)'
-        });
-
-        // Animate main project slide
-        tl.to('.project-slide', {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: 'power2.out'
-        }, '-=0.3');
-
-        // Animate metadata
-        tl.to('.project-meta', {
-          opacity: 1,
-          x: 0,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: 'power2.out'
-        }, '-=0.4');
-
-        // Animate features
-        tl.to('.project-feature', {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          stagger: 0.05,
-          ease: 'power2.out'
-        }, '-=0.2');
-
-      }, sectionRef);
-      return ctx;
-    };
+        if (!reduceMotion) {
+          gsap.set('.project-slide', { opacity: 0, y: 100 });
+          gsap.set('.project-nav-item', { opacity: 0, scale: 0.8 });
+          gsap.set('.project-meta', { opacity: 0, x: -50 });
+          gsap.set('.project-feature', { opacity: 0, y: 20 });
+          const tl = gsap.timeline();
+          tl.to('.project-nav-item', {
+            opacity: 1,
+            scale: 1,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: 'back.out(1.7)'
+          });
+          tl.to('.project-slide', {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'power2.out'
+          }, '-=0.3');
+          tl.to('.project-meta', {
+            opacity: 1,
+            x: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: 'power2.out'
+          }, '-=0.4');
+          tl.to('.project-feature', {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            stagger: 0.05,
+            ease: 'power2.out'
+          }, '-=0.2');
+        } else {
+          gsap.set(['.project-slide','.project-nav-item','.project-meta','.project-feature'], { opacity: 1, clearProps: 'all' })
+        }
+      }, sectionRef)
+      return ctx
+    }
 
     // Run animations immediately
     let ctx = run();
@@ -228,17 +221,17 @@ export default function Projects({ slideIndex }) {
       id="projects"
     >
       <div className="h-full overflow-y-auto">
-        <div className="container-custom px-6 py-10 max-w-7xl mx-auto">
+  <div className="container-custom px-4 sm:px-6 py-10 max-w-7xl mx-auto">
           {/* Top padding for pinned header */}
           <div className="pt-24 mb-8"></div>
 
           {/* Project Navigation */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-nowrap overflow-x-auto scrollbar-none gap-3 mb-8 pb-1 -mx-2 px-2 snap-x snap-mandatory md:flex-wrap md:justify-center md:gap-4 md:mb-12">
             {projects.map((project, index) => (
               <button
                 key={project.id}
                 onClick={() => selectProject(index)}
-                className={`project-nav-item px-6 py-3 rounded-full border transition-all duration-300 ${
+                className={`project-nav-item px-5 py-2.5 rounded-full border transition-all duration-300 text-sm md:text-base snap-start ${
                   selectedProject === index
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 border-transparent text-white shadow-lg'
                     : 'border-gray-600 bg-gray-800/50 text-gray-300 hover:border-blue-500 hover:text-blue-400'
@@ -251,7 +244,7 @@ export default function Projects({ slideIndex }) {
 
           {/* Main Project Display */}
           <div className="project-slide">
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
               {/* Project Visual */}
               <div className="relative">
                 <div className="aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 relative group">
@@ -300,7 +293,7 @@ export default function Projects({ slideIndex }) {
                 </div>
 
                 {/* Project Metrics */}
-                <div className="grid grid-cols-3 gap-4 mt-6">
+                <div className="grid grid-cols-3 sm:grid-cols-3 gap-3 sm:gap-4 mt-6">
                   {Object.entries(currentProject.metrics).map(([key, value], index) => (
                     <div key={key} className="project-meta text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50">
                       <div className="text-2xl font-bold text-blue-400 mb-1">{value}</div>
@@ -319,8 +312,8 @@ export default function Projects({ slideIndex }) {
                     <span className="text-sm text-gray-400">{currentProject.category}</span>
                   </div>
                   
-                  <h3 className="text-3xl md:text-4xl font-bold mb-2">{currentProject.title}</h3>
-                  <p className="text-xl text-blue-400 mb-4">{currentProject.subtitle}</p>
+                  <h3 className="text-2xl md:text-4xl font-bold mb-1 md:mb-2">{currentProject.title}</h3>
+                  <p className="text-lg md:text-xl text-blue-400 mb-3 md:mb-4">{currentProject.subtitle}</p>
                   <p className="text-gray-300 leading-relaxed mb-6">
                     {currentProject.longDescription}
                   </p>
@@ -344,7 +337,7 @@ export default function Projects({ slideIndex }) {
                 {/* Key Features */}
                 <div className="project-meta">
                   <h4 className="text-lg font-semibold mb-3 text-gray-200">Key Features</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {currentProject.features.map((feature, index) => (
                       <div key={index} className="project-feature flex items-center gap-3">
                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>

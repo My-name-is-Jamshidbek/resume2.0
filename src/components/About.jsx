@@ -90,11 +90,11 @@ export default function About({ slideIndex }) {
       id="about"
     >
       <div className="h-full flex items-center justify-center overflow-y-auto">
-        <div className="container-custom px-6 py-20 max-w-7xl mx-auto">
+  <div className="container-custom px-4 sm:px-6 py-16 md:py-20 max-w-7xl mx-auto">
           {/* Add top padding to account for pinned header */}
           <div className="pt-24 mb-10"></div>
           
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: Text content */}
           <div ref={textRef} className="space-y-8">
 
@@ -111,7 +111,7 @@ export default function About({ slideIndex }) {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
+            <div className="grid grid-cols-3 xs:grid-cols-3 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 pt-6 md:pt-8">
               <div className="text-center">
                 <div className="stat-number text-3xl font-bold gradient-text" data-value="50">0</div>
                 <p className="text-gray-400 mt-2">Projects Completed</p>
@@ -141,7 +141,7 @@ export default function About({ slideIndex }) {
           </div>
 
           {/* Right: Visual element */}
-          <div className="relative">
+          <div className="relative mt-10 lg:mt-0">
             <div ref={imageRef} className="relative">
               {/* Decorative elements */}
               <div className="absolute -top-6 -left-6 w-24 h-24 border-2 border-blue-500 rounded-full opacity-20"></div>

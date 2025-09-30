@@ -105,11 +105,11 @@ export default function Skills({ slideIndex }) {
       id="skills"
     >
       <div className="h-full overflow-y-auto">
-        <div className="container-custom px-6 py-10 max-w-7xl mx-auto">
+  <div className="container-custom px-4 sm:px-6 py-10 max-w-7xl mx-auto">
           {/* Add top padding to account for pinned header */}
           <div className="pt-24 mb-10"></div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+  <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Technical Skills */}
           <div ref={skillsRef}>
             <h3 className="text-3xl font-bold mb-8">Technical Skills</h3>
@@ -135,7 +135,7 @@ export default function Skills({ slideIndex }) {
           {/* Tools & Technologies */}
           <div>
             <h3 className="text-3xl font-bold mb-8">Tools & Technologies</h3>
-            <div className="tools-grid grid grid-cols-4 gap-4 mb-8">
+            <div className="tools-grid grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-4 gap-3 sm:gap-4 mb-8">
               {tools.map((tool, index) => (
                 <div 
                   key={tool} 

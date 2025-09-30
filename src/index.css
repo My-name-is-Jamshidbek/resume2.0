@@ -134,6 +134,20 @@ body::after {
   .app-section { /* stacking context for overlay removal if needed */
     isolation: isolate;
   }
+  /* Simple keyframes for fade/slide (respect reduced motion) */
+  @keyframes swipeFadeInUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .animate-fade-in-up { animation: swipeFadeInUp 0.6s ease-out; }
+  
+  /* Safe area padding utility (mobile notches) */
+  .pt-safe { padding-top: calc(env(safe-area-inset-top) + 0.75rem); }
+  .pb-safe { padding-bottom: calc(env(safe-area-inset-bottom) + 0.75rem); }
+  .px-safe { padding-left: calc(env(safe-area-inset-left) + 1rem); padding-right: calc(env(safe-area-inset-right) + 1rem); }
+  
+  /* Utility to hide native scrollbar cross-browser */
+  .scrollbar-none { scrollbar-width: none; -ms-overflow-style: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+  
+  /* Extra tiny breakpoint helper reserved (use standard Tailwind config for real utilities) */
 }
 
 /* Custom scrollbar */
