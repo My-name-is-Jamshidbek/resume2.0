@@ -9,18 +9,18 @@ export default function Skills({ slideIndex }) {
   const skillsRef = useRef(null)
 
   const skills = [
-    { name: 'JavaScript', level: 95, color: 'from-yellow-400 to-orange-500' },
-    { name: 'React', level: 90, color: 'from-blue-400 to-blue-600' },
-    { name: 'Node.js', level: 85, color: 'from-green-400 to-green-600' },
-    { name: 'TypeScript', level: 80, color: 'from-blue-500 to-indigo-600' },
-    { name: 'GSAP', level: 88, color: 'from-purple-400 to-purple-600' },
-    { name: 'MongoDB', level: 82, color: 'from-green-500 to-teal-600' },
-    { name: 'Express.js', level: 87, color: 'from-gray-600 to-gray-800' },
-    { name: 'Next.js', level: 85, color: 'from-black to-gray-700' },
+    { name: 'Flutter', level: 95, color: 'from-blue-400 to-cyan-500' },
+    { name: 'Kotlin', level: 92, color: 'from-purple-400 to-purple-600' },
+    { name: 'Java', level: 88, color: 'from-orange-400 to-red-600' },
+    { name: 'Django', level: 90, color: 'from-green-400 to-green-600' },
+    { name: 'C++', level: 85, color: 'from-blue-500 to-indigo-600' },
+    { name: 'Python', level: 92, color: 'from-yellow-400 to-blue-600' },
+    { name: 'SQL', level: 87, color: 'from-blue-600 to-teal-600' },
+    { name: 'REST APIs', level: 93, color: 'from-gray-600 to-gray-800' },
   ]
 
   const tools = [
-    'VS Code', 'Git', 'Docker', 'AWS', 'Figma', 'Photoshop', 'Webpack', 'Vite'
+    'Android Studio', 'VS Code', 'Git', 'Docker', 'Firebase', 'PostgreSQL', 'Arduino IDE', 'Linux'
   ]
 
   useLayoutEffect(() => {

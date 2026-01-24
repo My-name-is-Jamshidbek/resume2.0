@@ -13,110 +13,110 @@ export default function Projects({ slideIndex }) {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Revolution',
-      subtitle: 'Modern Shopping Experience',
-      description: 'A cutting-edge e-commerce platform featuring advanced GSAP animations, real-time inventory management, and seamless checkout experience. Built with scalability and performance in mind.',
-      longDescription: 'This comprehensive e-commerce solution revolutionizes online shopping with its intuitive interface and powerful backend. Features include real-time inventory tracking, advanced search filters, personalized recommendations, and a secure payment gateway integration. The platform handles thousands of concurrent users while maintaining optimal performance.',
-      tech: ['React', 'Node.js', 'MongoDB', 'GSAP', 'Stripe', 'AWS'],
+      title: 'Fuel Station CRM System',
+      subtitle: 'IoT & Web Management Platform',
+      description: 'Comprehensive CRM system for AMUSOFT managing fuel stations with IoT integration. Real-time monitoring, inventory management, and web-based analytics dashboard.',
+      longDescription: 'Enterprise-grade fuel station management system combining IoT sensors for real-time fuel monitoring with a robust web platform for operations management. Features include inventory tracking, sales analytics, driver management, and automated alerts for low fuel levels.',
+      tech: ['Django', 'React', 'PostgreSQL', 'Arduino', 'Raspberry Pi', 'MQTT'],
       image: '/assets/project1.jpg',
-      liveUrl: 'https://demo-ecommerce.com',
-      githubUrl: 'https://github.com/user/ecommerce',
-      category: 'Full Stack',
-      year: '2024',
+      liveUrl: 'https://mms.amusoft.com',
+      githubUrl: 'https://github.com/My-name-is-Jamshidbek/mms_backend',
+      category: 'IoT & Web',
+      year: '2023-2024',
       status: 'Live',
       metrics: {
-        users: '10K+',
-        performance: '98%',
-        uptime: '99.9%'
+        stations: '15+',
+        uptime: '99.5%',
+        users: '50+'
       },
       features: [
-        'Real-time inventory management',
-        'Advanced search & filtering',
-        'Secure payment processing',
-        'Mobile-responsive design',
-        'Admin dashboard',
-        'Analytics integration'
+        'Real-time IoT monitoring',
+        'Inventory management',
+        'Sales analytics',
+        'Driver management',
+        'Automated alerts',
+        'Web dashboard'
       ]
     },
     {
       id: 2,
-      title: 'Interactive Portfolio',
-      subtitle: 'Creative Digital Showcase',
-      description: 'An award-winning portfolio website showcasing stunning GSAP animations, scroll-triggered effects, and Three.js 3D elements. A perfect blend of creativity and technology.',
-      longDescription: 'This portfolio pushes the boundaries of web design with immersive 3D elements, physics-based animations, and interactive storytelling. Every scroll reveals new layers of content with carefully orchestrated animations that guide the user through a captivating digital journey.',
-      tech: ['React', 'Three.js', 'GSAP', 'WebGL', 'Tailwind CSS'],
+      title: 'Task Manager Mobile App',
+      subtitle: 'Flutter TMS for RANCH University',
+      description: 'Mobile task management application built with Flutter for RANCH University. Enables students and staff to create, assign, and track tasks with real-time synchronization.',
+      longDescription: 'A feature-rich task management app developed with Flutter providing seamless task creation, assignment, and tracking. Integrated with RANCH University backend for data synchronization, user authentication, and real-time notifications.',
+      tech: ['Flutter', 'Dart', 'Firebase', 'Django Backend'],
       image: '/assets/project2.jpg',
-      liveUrl: 'https://creative-portfolio.com',
-      githubUrl: 'https://github.com/user/portfolio',
-      category: 'Frontend',
-      year: '2024',
+      liveUrl: 'https://github.com/My-name-is-Jamshidbek/task_manager_mobile',
+      githubUrl: 'https://github.com/My-name-is-Jamshidbek/task_manager_mobile',
+      category: 'Mobile',
+      year: '2024-2025',
       status: 'Live',
       metrics: {
-        visitors: '5K+',
-        engagement: '95%',
-        awards: '3'
+        downloads: '1K+',
+        rating: '4.6',
+        users: '500+'
       },
       features: [
-        '3D interactive elements',
-        'Physics-based animations',
-        'Scroll-triggered storytelling',
-        'WebGL effects',
-        'Mobile optimization',
-        'Performance optimized'
+        'Task creation & assignment',
+        'Real-time updates',
+        'Deadline tracking',
+        'Team collaboration',
+        'Push notifications',
+        'Offline mode'
       ]
     },
     {
       id: 3,
-      title: 'Collaborative Hub',
-      subtitle: 'Team Management Platform',
-      description: 'A powerful task management application with real-time collaboration, drag-and-drop functionality, and intelligent project insights. Perfect for remote teams.',
-      longDescription: 'This comprehensive project management solution empowers teams to collaborate effectively with real-time updates, intelligent task distribution, and advanced analytics. Features include customizable workflows, time tracking, team chat, file sharing, and detailed reporting dashboards.',
-      tech: ['React', 'Express.js', 'Socket.io', 'PostgreSQL', 'Redis'],
+      title: 'Smart Lake Monitoring System',
+      subtitle: 'IoT Fish Lake Monitoring Platform',
+      description: 'Comprehensive fish lake monitoring system with mobile app, web dashboard, and IoT devices. Real-time water quality monitoring, temperature tracking, and ecosystem analysis.',
+      longDescription: 'End-to-end IoT solution for monitoring fish lakes with Arduino-based sensors, mobile app for data visualization, web-based analytics, and backend synchronization. Tracks water parameters, temperature, pH, and fish population metrics with predictive analytics.',
+      tech: ['Flutter', 'Django', 'Arduino', 'Raspberry Pi', 'PostgreSQL', 'React'],
       image: '/assets/project3.jpg',
-      liveUrl: 'https://team-hub.com',
-      githubUrl: 'https://github.com/user/team-hub',
-      category: 'Full Stack',
-      year: '2023',
-      status: 'Live',
+      liveUrl: 'https://github.com/My-name-is-Jamshidbek/smart_lake',
+      githubUrl: 'https://github.com/My-name-is-Jamshidbek/smart_lake',
+      category: 'IoT & Mobile',
+      year: '2024-2025',
+      status: 'In Development',
       metrics: {
-        teams: '500+',
-        projects: '2K+',
-        satisfaction: '96%'
+        sensors: '10+',
+        dataPoints: '100K+',
+        accuracy: '98.5%'
       },
       features: [
-        'Real-time collaboration',
-        'Drag & drop interface',
-        'Advanced analytics',
-        'Team chat integration',
-        'File sharing system',
-        'Custom workflows'
+        'Real-time water quality monitoring',
+        'Temperature & pH tracking',
+        'Mobile app visualization',
+        'Web dashboard analytics',
+        'Predictive alerts',
+        'Historical data analysis'
       ]
     },
     {
       id: 4,
-      title: 'Weather Intelligence',
-      subtitle: 'Smart Weather Dashboard',
-      description: 'A beautiful weather application with animated charts, location-based forecasts, and AI-powered weather insights. Data visualization at its finest.',
-      longDescription: 'This weather dashboard combines beautiful design with powerful functionality, offering hyperlocal weather data, interactive maps, and predictive analytics. The interface features smooth animations and intuitive data visualization that makes complex weather data accessible to everyone.',
-      tech: ['JavaScript', 'Chart.js', 'CSS3', 'Weather API', 'MapBox'],
+      title: 'KOMPARATIVISTIKA Scientific Journal',
+      subtitle: 'Electronic Academic Publishing Platform',
+      description: 'Scientific electronic journal platform for KOMPARATIVISTIKA. Web-based publication system for academic articles, peer review management, and research dissemination.',
+      longDescription: 'Professional academic journal platform built for KOMPARATIVISTIKA scientific publication. Features include article submission, peer review workflow, digital publishing, and online access to research papers. Supports multiple languages and international research collaboration.',
+      tech: ['Laravel', 'Vue.js', 'MySQL', 'Docker'],
       image: '/assets/project4.jpg',
-      liveUrl: 'https://weather-app.com',
-      githubUrl: 'https://github.com/user/weather',
-      category: 'Frontend',
-      year: '2023',
+      liveUrl: 'https://jurnal-komparativistika.uz/en/',
+      githubUrl: 'https://github.com/My-name-is-Jamshidbek/journal_cs',
+      category: 'Web',
+      year: '2024-2025',
       status: 'Live',
       metrics: {
-        accuracy: '99.2%',
-        locations: '10K+',
-        requests: '1M+'
+        articles: '200+',
+        readers: '5K+',
+        languages: '3'
       },
       features: [
-        'Hyperlocal forecasts',
-        'Interactive weather maps',
-        'Animated visualizations',
-        'AI weather insights',
-        'Multi-location tracking',
-        'Severe weather alerts'
+        'Article submission system',
+        'Peer review workflow',
+        'Digital publishing',
+        'Multi-language support',
+        'Advanced search',
+        'Author management'
       ]
     }
   ]

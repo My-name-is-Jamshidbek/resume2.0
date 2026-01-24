@@ -99,30 +99,30 @@ export default function About({ slideIndex }) {
           <div ref={textRef} className="space-y-8">
 
             <p className="text-xl text-gray-300 leading-relaxed">
-              I'm a passionate full-stack developer with <span className="gradient-text font-semibold">5+ years</span> of experience 
-              crafting exceptional digital experiences. I specialize in modern JavaScript frameworks, 
-              backend technologies, and creating stunning animations that bring interfaces to life.
+              I'm a versatile software engineer with <span className="gradient-text font-semibold">6+ years</span> of experience 
+              building cross-platform applications for Android, Web, and IoT ecosystems. I specialize in Flutter, Kotlin, Django, 
+              and embedded systems programming.
             </p>
 
             <p className="text-lg text-gray-400 leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
-              or experimenting with creative animations using GSAP and Three.js. I believe in writing clean, 
-              maintainable code and creating user experiences that are both beautiful and functional.
+              I'm passionate about creating efficient, scalable solutions that solve real-world problems. Whether it's developing 
+              responsive mobile apps, building robust web backends, or programming IoT devices, I bring technical excellence and 
+              innovative thinking to every project. I thrive in collaborative environments and love mentoring junior developers.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 xs:grid-cols-3 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 pt-6 md:pt-8">
               <div className="text-center">
-                <div className="stat-number text-3xl font-bold gradient-text" data-value="50">0</div>
-                <p className="text-gray-400 mt-2">Projects Completed</p>
+                <div className="stat-number text-3xl font-bold gradient-text" data-value="45">0</div>
+                <p className="text-gray-400 mt-2">Apps Deployed</p>
               </div>
               <div className="text-center">
-                <div className="stat-number text-3xl font-bold gradient-text" data-value="30">0</div>
-                <p className="text-gray-400 mt-2">Happy Clients</p>
+                <div className="stat-number text-3xl font-bold gradient-text" data-value="25">0</div>
+                <p className="text-gray-400 mt-2">Clients Served</p>
               </div>
               <div className="text-center">
-                <div className="stat-number text-3xl font-bold gradient-text" data-value="5">0</div>
-                <p className="text-gray-400 mt-2">Years Experience</p>
+                <div className="stat-number text-3xl font-bold gradient-text" data-value="6">0</div>
+                <p className="text-gray-400 mt-2">Years Coding</p>
               </div>
             </div>
 
@@ -166,10 +166,11 @@ export default function About({ slideIndex }) {
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     </div>
                     <div className="text-sm text-gray-300 font-mono space-y-2">
-                      <div><span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> = {"{"}</div>
+                      <div><span className="text-purple-400">const</span> <span className="text-blue-400">engineer</span> = {"{"}</div>
                       <div className="ml-4"><span className="text-green-400">name</span>: <span className="text-yellow-400">"Jamshidbek"</span>,</div>
-                      <div className="ml-4"><span className="text-green-400">skills</span>: [<span className="text-yellow-400">"React"</span>, <span className="text-yellow-400">"Node.js"</span>, <span className="text-yellow-400">"GSAP"</span>],</div>
-                      <div className="ml-4"><span className="text-green-400">passion</span>: <span className="text-yellow-400">"Creating amazing experiences"</span></div>
+                      <div className="ml-4"><span className="text-green-400">specialization</span>: <span className="text-yellow-400">"Android, Web, IoT"</span>,</div>
+                      <div className="ml-4"><span className="text-green-400">skills</span>: [<span className="text-yellow-400">"Flutter"</span>, <span className="text-yellow-400">"Django"</span>, <span className="text-yellow-400">"C++"</span>],</div>
+                      <div className="ml-4"><span className="text-green-400">passion</span>: <span className="text-yellow-400">"Building scalable solutions"</span></div>
                       <div>{"}"};</div>
                     </div>
                   </div>
@@ -178,21 +179,21 @@ export default function About({ slideIndex }) {
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg">
                       <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-bold">JS</span>
+                        <span className="text-white text-sm font-bold">📱</span>
                       </div>
-                      <span className="text-gray-300">JavaScript Expert</span>
+                      <span className="text-gray-300">Mobile Developer</span>
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg">
                       <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-bold">UX</span>
+                        <span className="text-white text-sm font-bold">🌐</span>
                       </div>
-                      <span className="text-gray-300">UI/UX Enthusiast</span>
+                      <span className="text-gray-300">Backend Specialist</span>
                     </div>
                     <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg">
                       <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm font-bold">A</span>
+                        <span className="text-white text-sm font-bold">⚙️</span>
                       </div>
-                      <span className="text-gray-300">Animation Specialist</span>
+                      <span className="text-gray-300">IoT & Embedded</span>
                     </div>
                   </div>
                 </div>

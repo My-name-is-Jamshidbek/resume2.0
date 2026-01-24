@@ -7,52 +7,64 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 const experiences = [
   {
-    period: '2018 - 2019',
-    title: 'Frontend Developer',
-    company: 'Creative Studio',
-    description: 'Built responsive marketing sites and component libraries with React and Tailwind, collaborating closely with designers.',
+    period: '2021 - 2022',
+    title: 'Junior Backend Developer',
+    company: 'AMUSOFT LTD',
+    description: 'Developed robust backend services using Django framework. Focused on API development, database design, and server-side functionality for various client projects.',
     achievements: [
-      'Shipped 12 marketing microsites',
-      'Introduced component design system',
-      'Cut bundle size by 25%'
+      'Built 5+ Django REST APIs',
+      'Optimized database queries',
+      'Implemented authentication systems'
     ],
-    tech: ['React', 'Tailwind', 'GSAP', 'Netlify']
+    tech: ['Django', 'Python', 'PostgreSQL', 'REST APIs']
   },
   {
-    period: '2019 - 2021',
-    title: 'Full Stack Engineer',
-    company: 'ScaleOps',
-    description: 'Implemented end‑to‑end features across Node APIs and React SPA; focused on performance, accessibility, and testing.',
+    period: '2022 - 2023',
+    title: 'Web & IoT Developer',
+    company: 'CITRON R&D Lab',
+    description: 'Worked on cutting-edge web and IoT projects focusing on smart home sensor integration. Designed embedded systems and connected device solutions.',
     achievements: [
-      'Reduced page TTI by 35%',
-      'Implemented CI test pipeline',
-      'Mentored 3 junior devs'
+      'Developed smart home sensor systems',
+      'Built IoT communication protocols',
+      'Designed connected device architectures'
     ],
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Jest']
+    tech: ['C++', 'Arduino', 'Raspberry Pi', 'Django', 'MQTT']
   },
   {
-    period: '2021 - 2023',
-    title: 'Senior Frontend Engineer',
-    company: 'Fintech Labs',
-    description: 'Led UI architecture, introduced animation standards, and improved reliability through better state management patterns.',
+    period: '2023 - 2024',
+    title: 'Backend Developer',
+    company: 'UBTUIT (University)',
+    description: 'Developed web applications and backend services using Laravel and Django. Collaborated with university departments to create institutional web solutions.',
     achievements: [
-      'Animation framework adoption company‑wide',
-      'Improved Core Web Vitals (LCP <2.2s)',
-      'Auth flow refactor lowered errors 60%'
+      'Built 3+ web applications',
+      'Implemented university management systems',
+      'Mentored junior developers'
     ],
-    tech: ['TypeScript', 'React Query', 'GSAP', 'WebSockets']
+    tech: ['Laravel', 'Django', 'PHP', 'Python', 'MySQL']
   },
   {
-    period: '2023 - Present',
-    title: 'Senior Full Stack Developer',
-    company: 'Tech Innovations Inc.',
-    description: 'Leading development of scalable web applications using React, Node.js, and cloud services. Driving animation & DX best practices.',
+    period: '2024 - 2026',
+    title: 'Mobile Developer',
+    company: 'AMUSOFT LTD',
+    description: 'Specialized in mobile app development across iOS and Android platforms. Built 3 production Kotlin apps and 2 Flutter applications with focus on performance and UX.',
     achievements: [
-      'Improved performance by 40%',
-      'Led team of 5 developers',
-      'Delivered 15+ animated experiences'
+      'Shipped 3 Kotlin Android apps',
+      'Developed 2 cross-platform Flutter apps',
+      'Improved app ratings to 4.7+ stars'
     ],
-    tech: ['React', 'Node.js', 'AWS', 'GSAP', 'TypeScript'],
+    tech: ['Kotlin', 'Flutter', 'Java', 'Firebase', 'Android Studio']
+  },
+  {
+    period: '2025 - Present',
+    title: 'Team Lead & Mobile Developer',
+    company: 'RANCH University',
+    description: 'Leading IT laboratory team and developing university projects. Architecting and implementing comprehensive solutions across web, Android, and iOS platforms.',
+    achievements: [
+      'Leading team of developers',
+      'Delivered 4 major projects',
+      'Mentoring junior developers'
+    ],
+    tech: ['Kotlin', 'Flutter', 'Laravel', 'Django', 'Firebase'],
     isCurrent: true
   }
 ]

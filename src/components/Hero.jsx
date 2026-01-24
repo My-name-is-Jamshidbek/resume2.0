@@ -135,13 +135,13 @@ export default function Hero() {
             
             <h2 className="hero-title text-base xs:text-lg md:text-2xl text-blue-400 font-medium mb-4 flex items-center">
               <span className="inline-block w-6 md:w-8 h-0.5 bg-blue-400 mr-3"></span>
-              Full-Stack Developer
+              Software Engineer
             </h2>
             
             <p className="hero-tagline text-sm xs:text-base md:text-xl text-gray-300 mb-8 leading-relaxed">
-              Crafting innovative digital experiences with modern technologies and 
+              Building powerful cross-platform solutions for 
               <span className="block font-semibold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                stunning animations that captivate users
+                Android, Web & IoT applications
               </span>
             </p>
             
@@ -201,12 +201,12 @@ export default function Hero() {
             
             {/* Experience badge */}
             <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1.5 rounded-full shadow-lg z-20">
-              <p className="text-xs xs:text-sm font-medium">5+ Years Experience</p>
+              <p className="text-xs xs:text-sm font-medium">6+ Years Experience</p>
             </div>
             
             {/* Tech stack badge */}
             <div className="absolute -top-4 -right-4 bg-gray-800/80 backdrop-blur-sm text-white px-4 py-1.5 rounded-full shadow-lg z-20">
-              <p className="text-xs xs:text-sm font-medium">React • Node • GSAP</p>
+              <p className="text-xs xs:text-sm font-medium">Flutter • Django • C++</p>
             </div>
             
             {/* Background glow */}
