@@ -55,12 +55,7 @@ export default function Hero() {
           stagger: 0.1,
           duration: 0.6,
           ease: "back.out(1.7)"
-        }, "-=0.4")
-        .from(".scroll-indicator", {
-          opacity: 0,
-          y: -20,
-          duration: 0.8
-        }, "-=0.2");
+        }, "-=0.4");
 
       // Parallax effect for background elements
       gsap.to(".parallax-bg", {
@@ -212,14 +207,6 @@ export default function Hero() {
             {/* Background glow */}
             <div className="absolute inset-0 -z-10 bg-blue-500/20 blur-3xl rounded-full transform scale-75"></div>
           </div>
-        </div>
-      </div>
-      
-      {/* Scroll indicator */}
-      <div className="scroll-indicator absolute bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-80 hover:opacity-100 transition-opacity duration-300">
-        <span className="text-xs md:text-sm text-gray-400 mb-1 md:mb-2">Scroll Down</span>
-        <div className="w-5 h-9 md:w-6 md:h-10 rounded-full border-2 border-gray-400 flex items-start justify-center p-1">
-          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></div>
         </div>
       </div>
     </section>
